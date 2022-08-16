@@ -1,6 +1,6 @@
 # Mixture2Music Offical
 
-This repository is implementation of "Instrument Separation of Symbolic Music by Explicitly Guided Diffusion Model" (submitted at [NeurIPS ML4CD 2022](https://neuripscreativityworkshop.github.io/2022/)). Our diffusion model takes mixtures (time x pitch) as inputs and recovers music (time x pitch x instrument) with strong consistency.
+This repository is implementation of "Instrument Separation of Symbolic Music by Explicitly Guided Diffusion Model" (submitted at [NeurIPS ML4CD 2022](https://neuripscreativityworkshop.github.io/2022/)). Our diffusion model takes mixtures <em>(time x pitch)</em> as inputs and recovers music <em>(time x pitch x instrument)</em> with strong consistency.
 
 <p align="center">
     <img src="image.png" width="600">
@@ -23,7 +23,7 @@ This repository is implementation of "Instrument Separation of Symbolic Music by
 [preprocess.ipynb](/preprocess.ipynb) is to obtain the pianoroll of mixtures and music pairs from LMD. Although it is originally built to separate melody/non-melody tracks using midi-miner, you can modify it by removing melody-related codes.
 
 ### Model Training
-You should modify json fields related to file and folder paths in config.json. By setting "strategy" (ddp) and "gpus" ([0, 1, 2]), you can train the models with distributed GPU settings of pytorch-lightining.
+You should modify json fields related to file and folder paths in config.json. By setting "strategy" (ex. ddp) and "gpus" (ex. [0, 1, 2]), you can train the models with distributed GPU settings of pytorch-lightining.
 
 For training the diffusion separator based on TransUNet, the command is below;
 ```
