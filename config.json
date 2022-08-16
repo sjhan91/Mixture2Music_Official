@@ -1,0 +1,19 @@
+{
+    "train_folder_path": "/workspace/music/data/lakh_melody2music_res_4_bar_4/melody",
+    "test_folder_path": "/workspace/music/data/lakh_melody2music_res_4_bar_4/no_melody",
+    "tranunet_model_path": "/workspace/music/Mixture2Music_Official/model/TransUNet-Mixture-epoch=9-val_loss=0.0004.ckpt",
+    "decoder_model_path": "/workspace/music/Mixture2Music_Official/model/SimpleDecoder-Mixture-epoch=7-val_loss=0.0000.ckpt",
+    "batch_size": 512,
+    "in_ch": 5,
+    "out_ch": 5,
+    "latent_dim": 256,
+    "d_model": 256,
+    "num_layers": 2,
+    "time_emb_dim": 16,
+    "time_steps": 1000,
+    "rate": 0,
+    "strategy": null,
+    "gpus": [
+        0
+    ]
+}
